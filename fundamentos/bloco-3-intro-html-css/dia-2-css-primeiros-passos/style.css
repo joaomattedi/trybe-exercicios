@@ -1,0 +1,28 @@
+h1{
+    size: 65px;
+    color: orange;
+    font-family: sans-serif;
+}
+p{
+    font-weight: 600;
+    font-size: 3em;
+    font-style: oblique;
+    text-align: center;
+}
+body{
+    font-size: 16px;
+}
+ul{
+    background-color:beige;
+    line-height: 40px;
+    text-decoration: underline;
+}
+#red{
+    background-color: rgb(255, 85, 85);
+}
+#brown{
+    background-color: rgba(105, 17, 17, 0.651);
+}
+#yellow{
+    background-color: rgba(243, 243, 81, 0.877);
+}
