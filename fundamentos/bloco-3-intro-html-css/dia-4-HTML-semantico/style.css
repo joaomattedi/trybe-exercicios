@@ -4,12 +4,12 @@
     margin: 0;
     padding: 0;
     /* border:1px solid red; */
-    background-color: #C4FFF9;
+    background-color: transparent;
 }
 
 body{
     font-family: 'Oswald', sans-serif;
-
+    background-color: #C4FFF9;
 }
 
 h1{
@@ -76,13 +76,19 @@ img{
     max-height: 320px;
 }
 .vision{
-    display: block;
-    padding: 0 40%;
+    /* border: 1px solid red; */
+    vertical-align: middle;
+    width: 100%;
+    padding:20px 10%;
     background-color: #9CEAEF;
+}
+.vision-section h3{
+    padding: 5px;
+    background-color: #9CEAEF;
+    color: #023436;
 }
 .vision p{
     display: inline-block;
-    padding: 20px;
     background-color: #9CEAEF;
     font-size: large;
     width: 350px;
@@ -92,10 +98,81 @@ img{
     padding-top: 20px;
     font-size: 25px;
 }
-.stomatopoda-eye{
+.stomatopoda-eye img{
     display: inline-block;
+    background-color: transparent;
+    border-radius: 25% 10%;
 }
-
+.smash{
+    vertical-align: middle;
+    background-color: #68D8D6;
+    padding: 20px 10%;
+    width: 100%;
+}
+.smash-section h3{
+    padding-top: 5px;
+    background-color: #68D8D6;
+}
+td, tr,tbody,p,strong{
+    background-color: transparent;
+}
+.smash td{
+    text-align: center;
+    padding: 0 20px;
+    vertical-align: middle;
+}
+.smash img{
+    border-radius: 25% 10%;
+    max-width: 100%;
+}
+.smash p{
+    max-width: 350px;
+    margin: auto;
+    font-size: large;
+}
+.localization-section{
+    padding-bottom: 7%;
+    background-color: #9CEAEF;
+}
+.localization{
+    width: 100%;
+    padding: 20px 10%;
+    background-color: #9CEAEF;
+    vertical-align: middle;
+}
+.localization td{
+    padding: 0 10px;
+    text-align: center;
+    vertical-align: middle;
+}
+.localization p{
+    max-width: 350px;
+    margin: auto;
+    font-size: large;
+}
+.localization img{
+    max-width: 100%;
+    border-radius: 10% 25%;
+}
+.localization-section h3{
+    padding: 5px 0;
+    background-color: #9CEAEF;
+}
+.aside-links{
+    background-color: aliceblue;
+    padding: 10px;
+    float: right;
+    height: 100%;
+    
+}
+.aside-links a{
+    line-height: 30px;
+    text-decoration: none;
+    color: dimgrey;
+}
+a{
+    background-color: transparent;
+}
 main{
     margin-top: 5px;
 }
@@ -105,12 +182,10 @@ main{
     bottom: 0;
     width: 100%;
 }
-.localization{
-    margin-bottom: 7%;
-}
 footer p{
     display: inline-block;
     width: 100%;
     padding: 10px;
     background-color: #023436;
+    color: antiquewhite;
 }
