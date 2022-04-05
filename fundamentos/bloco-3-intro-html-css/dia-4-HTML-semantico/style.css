@@ -1,0 +1,116 @@
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Oswald:wght@200;400;700&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    /* border:1px solid red; */
+    background-color: #C4FFF9;
+}
+
+body{
+    font-family: 'Oswald', sans-serif;
+
+}
+
+h1{
+    font-family: 'Bebas Neue', sans-serif;
+    text-align: center;
+    padding: 10px 0;
+    font-size: 60px;
+    background-color: #68D8D6;
+    color: #023436;
+}
+.nav-links li{
+    display: inline-block;
+    text-align: center;
+    margin: 0 30px;
+    background-color: #9CEAEF;
+}
+.nav-links a{
+    background-color: #9CEAEF;
+    display: inline-block;
+    text-decoration: none;
+    color: #023436;
+    padding: 5px;
+}
+.nav-links a:hover{
+    color: azure;
+    background-color: #68D8D6;
+}
+.nav-links ul{
+    text-align: center;
+    background-color: #9CEAEF;
+}
+article{
+    text-align: center;
+}
+article h2{
+    margin-top: 15px;
+    margin-bottom: 20px;
+    color: #023436;
+}
+.general-specifications{
+    display: inline-block;
+    text-align: justify;
+    margin-right: 2%;
+    margin-left: auto;
+    line-height: 40px;
+}
+.general-specifications p{
+    font-style: italic;
+}
+.general li{
+    list-style-type: none;
+}
+.general{
+    margin: 0 10%;
+    margin-bottom: 60px;
+}
+img{
+    height: 300px;
+}
+.stomatopoda-img{
+    display: inline-block;
+    margin-left: 2%;
+    margin-right: auto;
+    max-height: 320px;
+}
+.vision{
+    display: block;
+    padding: 0 40%;
+    background-color: #9CEAEF;
+}
+.vision p{
+    display: inline-block;
+    padding: 20px;
+    background-color: #9CEAEF;
+    font-size: large;
+    width: 350px;
+}
+.vision h3{
+    background-color: #9CEAEF;
+    padding-top: 20px;
+    font-size: 25px;
+}
+.stomatopoda-eye{
+    display: inline-block;
+}
+
+main{
+    margin-top: 5px;
+}
+.footer{
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+}
+.localization{
+    margin-bottom: 7%;
+}
+footer p{
+    display: inline-block;
+    width: 100%;
+    padding: 10px;
+    background-color: #023436;
+}
