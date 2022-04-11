@@ -1,18 +1,3 @@
-// let numPrim = [];
-
-// for(let i = 50; i > 0; i -= 1){
-
-//     for(let j = 2; j < i; j += 1){
-//             if(i % j != 0){
-//                 numPrim.push(i);
-//             }
-//     }
-    
-
-// }
-
-// console.log(numPrim);
-
 let numPrim = [];
 let maiorPrim = 0;
 
