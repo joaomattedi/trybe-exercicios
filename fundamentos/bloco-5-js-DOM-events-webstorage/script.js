@@ -1,77 +1,121 @@
-function newElement(type) {
-    let newElement = document.createElement(type);
-    return newElement;
+function createDaysOfTheWeek() {
+  const weekDays = ['Domingo', 'Segunda', 'Terça', 'Quarta', 'Quinta', 'Sexta', 'Sábado']
+  const weekDaysList = document.querySelector('.week-days');
+
+  for (let index = 0; index < weekDays.length; index += 1) {
+    const days = weekDays[index];
+    const dayListItem = document.createElement('li');
+    dayListItem.innerHTML = days;
+
+    weekDaysList.appendChild(dayListItem);
+  };
+};
+
+createDaysOfTheWeek();
+
+// Escreva seu código abaixo.
+
+const dezDaysList = [29, 30, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31];
+const holidays = [24,25,31];
+
+for(let i of dezDaysList){
+  let li = document.createElement('li');
+  document.getElementById('days').appendChild(li).innerText = i;
 }
 
-function changeText(selector,text){
-  document.querySelector(selector).innerText = text;
-}
-
-function changeClass(selector,classes){
-  document.querySelector(selector).className = classes;
-}
-
-const bodyH1 = newElement('h1');
-document.body.appendChild(bodyH1);
-changeText('h1','Exercício 5.2 - JavaScript DOM');
-  
-const mainContent = newElement('main');
-document.body.appendChild(mainContent);
-changeClass('main', 'main-content');
-
-const section1 = newElement('section');
-document.querySelector('main').appendChild(section1);
-changeClass('main section', 'center-content');
-
-const text1 = newElement('p');
-document.querySelector('main .center-content').appendChild(text1);
-changeText('.center-content p','Algum texto dentro da tag P do center content');
-
-const section2 = newElement('section');
-document.querySelector('main').appendChild(section2);
-changeClass('.center-content + section','left-content');
-
-const section3 = newElement('section');
-document.querySelector('main').appendChild(section3);
-changeClass('.left-content + section', 'right-content');
-
-const image = newElement('img');
-document.querySelector('.left-content').appendChild(image);
-changeClass('.left-content img', 'small-image');
-image.src = 'https://picsum.photos/200'
-
-const list = newElement('ul');
-document.querySelector('.right-content').appendChild(list);
-const numbers = ['um','dois','tres','quatro','cinco','seis','sete','oito','nove','dez'];
-for(let i of numbers){
-  let lis = newElement('li');
-  document.querySelector('.right-content ul').appendChild(lis).innerHTML = i;
-}
-
-for(let i = 0; i < 3; i += 1){
-  let h3s = newElement('h3');
-  document.querySelector('main').appendChild(h3s);
-}
-
-changeClass('h1','title');
-// changeClass('h3','description');
-// changeClass('h3 + h3','description');
-// changeClass('h3 + h3 + h3','description');
-const h3s = document.querySelectorAll('main h3');
-h3s.forEach(h3 => {
-  h3.className = 'description';
-  h3.innerText = 'TESTE TESTE TESTE'
-});
-
-document.querySelector('main').removeChild(section2);
-
-document.querySelector('.right-content').style.marginRight = 'auto';
-
-document.querySelector('.center-content').parentElement.style.backgroundColor = 'green';
-
-const lis = document.querySelectorAll('ul li');
-lis.forEach(li => {
-  if(li.innerText == 'nove' || li.innerText == 'dez'){
-    document.querySelector('ul').removeChild(li);
+document.querySelectorAll('#days li').forEach(li => {
+  li.className = 'day';
+  if(li.innerText == 24 || li.innerText == 25 || li.innerText == 31){
+    li.classList.add('holiday');
+  }
+  if(li.innerText == 4 ||li.innerText == 11 ||li.innerText == 18 ||li.innerText == 25){
+    li.classList.add('friday')
   }
 });
+
+function createButtons(buttonName,buttonId) {
+
+  const button = document.createElement('button');
+  document.querySelector('.buttons-container').appendChild(button);
+  button.innerText = buttonName;
+  button.id = buttonId;
+
+}
+
+createButtons('Feriados','btn-holiday');
+
+const buttonHolidays = document.getElementById('btn-holiday');
+
+buttonHolidays.addEventListener('click',spotlightHoli);
+let validatorBtnHoliday = false;
+
+function spotlightHoli(event){
+  let holidays = document.querySelectorAll('.holiday');
+  if(validatorBtnHoliday == false){
+    holidays.forEach(li => {
+      li.style.backgroundColor = 'white';
+      validatorBtnHoliday = true;
+    });
+  }else{
+    holidays.forEach(li => {
+      li.style.backgroundColor = 'rgb(238,238,238)';
+      validatorBtnHoliday = false;
+    });
+  }
+}
+
+createButtons('Sexta-feira','btn-friday');
+
+const buttonFriday = document.getElementById('btn-friday');
+buttonFriday.addEventListener('click',spotlightFriday);
+let validatorBtnFriday = false;
+
+function spotlightFriday(event){
+  let friday = document.querySelectorAll('.friday');
+  if(validatorBtnFriday == false){
+    friday.forEach(element => {
+      element.style.backgroundColor = 'white';
+      validatorBtnFriday = true;
+    });
+  }else{
+    friday.forEach(element => {
+      element.style.backgroundColor = 'rgb(238,238,238)';
+      validatorBtnFriday = false;
+    });
+  }
+}
+
+const lis = document.querySelectorAll('.day');
+
+for(let i of lis){
+  i.addEventListener('mouseover', zoom);
+  i.addEventListener('mouseout', zoomOut);
+}
+
+function zoom(event){
+  console.log(event.target);
+  event.target.style.fontSize = '2em';
+}
+function zoomOut(event){
+  console.log(event.target);
+  event.target.style.fontSize = '20px';
+}
+
+function tasks(task){
+
+  let newTask = document.createElement('span');
+  document.querySelector('.my-tasks').appendChild(newTask).innerText = task;
+}
+
+tasks('Cozinhar');
+
+function colorTask(color) {
+  
+  let element = document.createElement('div');
+  document.querySelector('.my-tasks').appendChild(element);
+  element.style.backgroundColor = color;
+  element.className = 'task';
+}
+
+colorTask('blue');
+
