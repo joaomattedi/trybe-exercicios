@@ -90,14 +90,15 @@ const lis = document.querySelectorAll('.day');
 for(let i of lis){
   i.addEventListener('mouseover', zoom);
   i.addEventListener('mouseout', zoomOut);
+  i.addEventListener('click',selectDay);
 }
 
 function zoom(event){
-  console.log(event.target);
+  // console.log(event.target);
   event.target.style.fontSize = '2em';
 }
 function zoomOut(event){
-  console.log(event.target);
+  // console.log(event.target);
   event.target.style.fontSize = '20px';
 }
 
@@ -119,3 +120,57 @@ function colorTask(color) {
 
 colorTask('blue');
 
+const tasksEvents = document.querySelectorAll('.my-tasks .task');
+let taskSelected = false;
+
+for(let i of tasksEvents) {
+  i.addEventListener('click',selectTask);
+}
+
+function selectTask(event) {
+  
+  if(taskSelected == false){
+    event.target.classList.add('selected');
+    taskSelected = true;
+  }else{
+    for(let i of tasksEvents){
+      i.classList.remove('selected');
+      taskSelected = false;
+    }
+  }
+}
+
+function selectDay(e) {
+  let colorTask = window.getComputedStyle(document.querySelector('.selected')).getPropertyValue('background-color');
+  let colorDay = window.getComputedStyle(e.target).getPropertyValue('color');
+
+  if(colorDay == colorTask){
+    e.target.style.color = 'rgb(119,119,119)';
+  }else{
+    e.target.style.color = colorTask;
+  }
+}
+
+// const text = document.getElementById('task-input').value;
+document.getElementById('btn-add').addEventListener('click',compromisso);
+const keyPressed = document.getElementById('task-input');
+
+keyPressed.addEventListener('keydown', e => {
+  if(e.key === 'Enter'){
+    compromisso();
+    e.currentTarget.value = '';
+  }
+});
+
+function compromisso() {
+  const text = document.getElementById('task-input').value;
+  
+  if (text == '') {
+    alert('Nenhum compromisso descrito!');
+  }else{
+    let newCompromisso = document.createElement('li');
+    document.querySelector('.task-list').appendChild(newCompromisso);
+    newCompromisso.innerText = text;
+  }
+  
+}
