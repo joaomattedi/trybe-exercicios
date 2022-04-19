@@ -151,7 +151,6 @@ function selectDay(e) {
   }
 }
 
-// const text = document.getElementById('task-input').value;
 document.getElementById('btn-add').addEventListener('click',compromisso);
 const keyPressed = document.getElementById('task-input');
 
