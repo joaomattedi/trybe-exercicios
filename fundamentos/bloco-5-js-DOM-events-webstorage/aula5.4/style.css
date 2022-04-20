@@ -1,0 +1,32 @@
+* {
+    margin: 0px;
+    padding: 0px;
+    background-color: transparent;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+h1 {
+    text-align: center;
+    padding-top: 10px ;
+    font-size: 50px;
+}
+
+p {
+    margin: 20px auto;
+    text-align: justify;
+    max-width: 500px;
+}
+
+#change-property input {
+    margin: 5px auto;
+    text-align: center;
+}
+
+#change-property {
+    margin: 10px auto;
+    text-align: center;
+}
+
+.main-content {
+    text-align: center;
+}
