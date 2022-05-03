@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>EM PROGRESSO</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="form-trip-header">
+    <h1 id="form-trip-title">TRYBETRIP</h1>
+  </header>
+  <main class="main-content">
+    <form action="" method="get">
+      <div class="form-line">
+        <label for="user-name">Nome:</label>
+        <input type="text" name="full-name" id="user-name" autofocus required minlength="10" maxlength="40">
+      </div>
+      <div class="form-line">
+        <label for="user-email">E-mail:</label>
+        <input type="email" name="email" id="user-email" required minlength="10" maxlength="50">
+      </div>
+      <div class="form-line">
+        <input type="radio" name="trip" id="destiny_1" checked>
+        <label for="destiny_1">Cidade</label>
+        <input type="radio" name="trip" id="destiny_2">
+        <label for="destiny_2">Campo</label>
+        <input type="radio" name="trip" id="destiny_3">
+        <label for="destiny_3">Praia</label>
+        <input type="radio" name="trip" id="destiny_4">
+        <label for="destiny_4">Montanhas</label>
+      </div>
+      <div class="form-line">
+        <label for="answer">Por que você deveria ser a pessoa desenvolvedora a ganhar o concurso TrybeTrip?</label>
+        <textarea name="answer" id="answer" cols="30" rows="10" maxlength="500" required></textarea>
+      </div>
+      <div class="form-line">
+        <label for="form-date">Qual a melhor data para fazer sua viagem:</label>
+        <input type="date" name="date" id="form-date">
+      </div>
+      <div class="form-line">
+        <input type="checkbox" name="trybe-news" id="news-check">
+        <label for="news-check">Gostaria de receber outras incríveis oportunidades oferecidas pela Trybe?</label>
+      </div>
+      <div class="form-line">
+        <input type="checkbox" name="trybe-term" id="term-check">
+        <label for="term-check">Concordo que imagens das minhas férias poderão ser usadas na divulgação de concursos futuros.</label>
+      </div>
+      <div class="form-line">
+        <button type="submit" id="submit-form">Enviar</button>
+        <button id="clear-form">Apagar</button>
+      </div>
+    </form>
+  </main>
+  <script src="script.js"></script>
+</body>
+</html>
