@@ -1,0 +1,49 @@
+html {
+  box-sizing: border-box;
+}
+
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+header {
+  display: flex;
+  flex-direction: column;
+}
+
+header p {
+  font-size: x-large;
+  padding: 10px 0;
+  margin: 0;
+  text-align: center;
+  background-color: black;
+  color: white;
+  text-transform: uppercase;
+  font-family: monospace;
+}
+
+header nav ul {
+  display: flex;
+  list-style: none;
+  justify-content: space-evenly;
+  padding: 0;
+  margin: 0;
+}
+
+header nav ul li {
+  padding: 5px;
+}
+
+aside {
+  margin: 0 10px;
+}
+
+.aside-one ul {
+  list-style: none;
+  padding: 0;
+}
+
+.aside-one ul li {
+  margin-bottom: 5px;
+  padding-left: 20px;
+}
