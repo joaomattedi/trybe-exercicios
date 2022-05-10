@@ -1,0 +1,1 @@
+const testSum = restore('./sum.js');
