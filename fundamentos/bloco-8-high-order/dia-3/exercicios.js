@@ -75,3 +75,47 @@ function nameAndAge() {
 }
 
 // console.log(nameAndAge());
+
+function fantasyOrScienceFiction() {
+  // escreva seu código aqui
+  return books.filter((element) => element.genre === 'Fantasia' || element.genre === 'Ficção Científica');
+}
+
+// console.log(fantasyOrScienceFiction());
+
+function oldBooksOrdered() {
+  // escreva seu código aqui
+  return books.filter((element) => (2020 - element.releaseYear) > 60).sort((a,b) => a.releaseYear - b.releaseYear);
+}
+
+// console.log(oldBooksOrdered());
+
+function fantasyOrScienceFictionAuthors() {
+  // escreva seu código aqui
+  return fantasyOrScienceFiction()
+  .map((element) => `${element.author.name}`)
+  .sort();
+}
+
+// console.log(fantasyOrScienceFictionAuthors());
+
+function oldBooks() {
+  // escreva seu código aqui
+  return oldBooksOrdered()
+  .sort((a,b) => a.id - b.id)
+  .map((element) => `${element.name}`);
+}
+
+// console.log(oldBooks());
+
+function authorWith3DotsOnName() {
+  // escreva seu código aqui
+  // return books.find((element) => element.author.name.match(/\./g).length === 3).name;
+  return books.filter((book) => (
+    book.author.name[1] === '.'
+    && book.author.name[4] === '.'
+    && book.author.name[7] === '.'
+  ))[0].name;
+}
+
+console.log(authorWith3DotsOnName());
