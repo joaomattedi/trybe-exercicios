@@ -110,12 +110,15 @@ function oldBooks() {
 
 function authorWith3DotsOnName() {
   // escreva seu código aqui
-  // return books.find((element) => element.author.name.match(/\./g).length === 3).name;
-  return books.filter((book) => (
-    book.author.name[1] === '.'
-    && book.author.name[4] === '.'
-    && book.author.name[7] === '.'
-  ))[0].name;
+  return books.find((element) => element.author.name.match(/\./g).length === 3 
+  && element.author.name.split(' ')[0].length === 2 
+  && element.author.name.split(' ')[1].length === 2
+  && element.author.name.split(' ')[2].length === 2).name;
+  // return books.filter((book) => (
+  //   book.author.name[1] === '.'
+  //   && book.author.name[4] === '.'
+  //   && book.author.name[7] === '.'
+  // ))[0].name;
 }
 
 console.log(authorWith3DotsOnName());
