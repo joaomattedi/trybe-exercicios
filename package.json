@@ -4,9 +4,9 @@
   "description": "Exercícios Course",
   "main": "index.js",
   "dependencies": {
+    "@types/jest": "^27.5.1",
     "jest": "^28.1.0"
   },
-  "devDependencies": {},
   "scripts": {
     "test": "jest"
   },
