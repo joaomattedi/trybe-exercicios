@@ -9,7 +9,8 @@
     "node-fetch": "^2.6.7"
   },
   "scripts": {
-    "test": "jest"
+    "test": "jest",
+    "cypress:open": "cypress open"
   },
   "repository": {
     "type": "git",
@@ -21,5 +22,8 @@
   "bugs": {
     "url": "https://github.com/joaomattedi/trybe-exercicios/issues"
   },
-  "homepage": "https://github.com/joaomattedi/trybe-exercicios#readme"
+  "homepage": "https://github.com/joaomattedi/trybe-exercicios#readme",
+  "devDependencies": {
+    "cypress": "^10.0.1"
+  }
 }
