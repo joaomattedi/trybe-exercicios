@@ -1,0 +1,23 @@
+{
+  "name": "trybe-exercicios",
+  "version": "1.0.0",
+  "description": "Exercícios Course",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/joaomattedi/trybe-exercicios.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/joaomattedi/trybe-exercicios/issues"
+  },
+  "homepage": "https://github.com/joaomattedi/trybe-exercicios#readme",
+  "dependencies": {
+    "redux": "^4.2.0"
+  }
+}
